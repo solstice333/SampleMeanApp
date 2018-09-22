@@ -1,0 +1,11 @@
+<div class="container">
+   <div class="row" *ngFor="let kitty of kitties">
+      <div class="card card-block">
+         <h4 class="card-title">{{kitty.name}}</h4>
+         <p *ngIf="kitty.furry" class="card-text">kitty is furry</p>
+         <p *ngIf="!kitty.furry" class="card-text">kitty is rough</p>
+         <p *ngIf="kitty.friendly" class="card-text">kitty is friendly</p>
+         <p *ngIf="!kitty.friendly" class="card-text">kitty is mean</p>
+      </div>
+   </div>
+</div>
