@@ -22,3 +22,16 @@ $ DEBUG=mean-app:* npm run devstart
 ```
 
 Then visit localhost:3000.
+
+To kill the mongo daemon, locate the id associated to mongod, for example,
+
+```
+$ jobs
+[1]  + running    mongod --dbpath db &> /dev/null
+```
+
+then use kill with `%<id>` where <id> is the actual id from the above step
+
+```
+$ kill %1
+```
