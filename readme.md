@@ -6,10 +6,18 @@ This is a sample app using a MEAN stack using the method where the frontend is b
 
 ## Usage
 
-At top level
+Install mongo, for example,
+
+```
+$ brew install mongodb
+```
+
+At top level, install deps, run mongo daemon, populate db with sample data, run express server, which will build and serve angular, which will talk to the REST backend through /api
 
 ```
 $ npm run installall
+$ mongod --dbpath db &>/dev/null &
+$ node populatedb.js
 $ DEBUG=mean-app:* npm run devstart
 ```
 
