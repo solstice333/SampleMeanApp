@@ -4,9 +4,13 @@ const path = require('path');
 const logger = require('morgan');
 
 const apiRouter = require('./routes/apiRouter');
+const kittiesRouter = require('./routes/kittiesRouter');
 const dist = 'angular-frontend/dist/mean-app';
 
 const app = express();
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -14,10 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, dist)));
 
 app.use('/api', apiRouter);
-
-app.use((req, res, next) => {
-   res.render(path.join(__dirname, dist, 'index.html'));
-})
+app.use('/kitties', kittiesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
