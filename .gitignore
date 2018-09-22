@@ -61,7 +61,7 @@ typings/
 .next
 
 # db
-db/
+db/*
 !db/.track
 
 # misc
