@@ -30,7 +30,7 @@ $ jobs
 [1]  + running    mongod --dbpath db &> /dev/null
 ```
 
-then use kill with `%<id>` where <id> is the actual id from the above step
+then use kill with `%<id>` where `<id>` is the actual id from the above step
 
 ```
 $ kill %1
