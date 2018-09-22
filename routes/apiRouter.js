@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const apiController = require('../controllers/apiController');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-   res.json({ 'message': 'hello world' });
-});
+router.get('/', apiController.index);
 
 module.exports = router;
