@@ -38,9 +38,9 @@ function main() {
 
    parser.addArgument('--dburl', 
       { 
-         defaultValue: 'mongodb://localhost:27017/boot',
+         defaultValue: 'mongodb://localhost:27017/kitties',
          help: 'URL to the mongodb to populate. ' +
-            'Defaults to mongodb://localhost:27017/boot'
+            'Defaults to mongodb://localhost:27017/kitties'
       });
    let args = parser.parseArgs();
 
